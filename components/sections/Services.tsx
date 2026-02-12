@@ -13,6 +13,7 @@ const services = [
         features: ['Lecturas personalizadas', 'Predicciones exactas', 'Orientación espiritual'],
         href: '/tarot',
         gradient: 'from-purple-500/20 to-pink-500/20',
+        backgroundImage: '/tarot.png',
     },
     {
         icon: '💝',
@@ -21,6 +22,7 @@ const services = [
         features: ['100% efectivos', 'Discretos y seguros', 'Resultados garantizados'],
         href: '/amarres',
         gradient: 'from-pink-500/20 to-red-500/20',
+        backgroundImage: '/amarres.png',
     },
     {
         icon: '✨',
@@ -29,6 +31,7 @@ const services = [
         features: ['Purificación completa', 'Paz interior', 'Protección duradera'],
         href: '/limpieza-energetica',
         gradient: 'from-blue-500/20 to-cyan-500/20',
+        backgroundImage: '/limpieza-energetica.png',
     },
     {
         icon: '🛡️',
@@ -37,6 +40,7 @@ const services = [
         features: ['Protección permanente', 'Contra envidias', 'Blindaje total'],
         href: '/proteccion-espiritual',
         gradient: 'from-yellow-500/20 to-orange-500/20',
+        backgroundImage: '/proteccion espiritual.png',
     },
     {
         icon: '🌙',
@@ -45,6 +49,7 @@ const services = [
         features: ['Rituales personalizados', 'Ingredientes puros', 'Potentes resultados'],
         href: '/rituales-misticos',
         gradient: 'from-indigo-500/20 to-purple-500/20',
+        backgroundImage: '/rituales-misticos.png',
     },
     {
         icon: '🔯',
@@ -53,6 +58,7 @@ const services = [
         features: ['Terapia holística', 'Sanación profunda', 'Bienestar integral'],
         href: '/sanacion-espiritual',
         gradient: 'from-green-500/20 to-emerald-500/20',
+        backgroundImage: '/sanacion-espiritual.png',
     },
 ];
 
@@ -153,6 +159,17 @@ export default function Services() {
 
                                     {/* Main Card */}
                                     <div className={`relative bg-gradient-to-br from-purple-900/30 via-mystic-black/50 to-purple-950/30 backdrop-blur-2xl border border-mystic-gold/30 group-hover:border-mystic-gold/70 rounded-3xl p-8 h-full transition-all duration-500`}>
+                                        {/* Background Image for Protection Card */}
+                                        {service.backgroundImage && (
+                                            <div
+                                                className="absolute inset-0 rounded-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"
+                                                style={{
+                                                    backgroundImage: `url('${service.backgroundImage}')`,
+                                                    backgroundSize: 'cover',
+                                                    backgroundPosition: 'center',
+                                                }}
+                                            />
+                                        )}
                                         {/* Gradient Overlay on Hover */}
                                         <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-60 transition-opacity duration-500 rounded-3xl`} />
 
