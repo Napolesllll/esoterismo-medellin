@@ -63,10 +63,10 @@ export default function MysticalLoader() {
                             left: Math.random() * 100 + '%',
                             top: Math.random() * 100 + '%',
                             background: `radial-gradient(circle, ${i % 3 === 0
-                                    ? 'rgba(198, 167, 94, 0.15)'
-                                    : i % 3 === 1
-                                        ? 'rgba(138, 43, 226, 0.15)'
-                                        : 'rgba(100, 200, 255, 0.15)'
+                                ? 'rgba(198, 167, 94, 0.15)'
+                                : i % 3 === 1
+                                    ? 'rgba(138, 43, 226, 0.15)'
+                                    : 'rgba(100, 200, 255, 0.15)'
                                 } 0%, transparent 70%)`,
                             animation: `mystical-float ${4 + i * 0.3}s ease-in-out infinite`,
                             animationDelay: `${i * 0.1}s`,

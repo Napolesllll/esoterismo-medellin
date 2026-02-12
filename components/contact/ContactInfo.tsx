@@ -72,10 +72,10 @@ const scheduleInfo = [
 export default function ContactInfo() {
     return (
         <div className="space-y-6">
-            {/* Métodos de Contacto */}
-            <div className="mystic-card p-8">
-                <h3 className="font-serif text-xl mystic-glow-text mb-6">
-                    Formas de Contacto
+            {/* Métodos de Contacto - Premium */}
+            <div className="space-y-4">
+                <h3 className="font-serif text-2xl bg-gradient-to-r from-mystic-gold to-purple-300 bg-clip-text text-transparent mb-6">
+                    Canales de Contacto
                 </h3>
                 <div className="space-y-4">
                     {contactMethods.map((method, index) => (
@@ -84,30 +84,44 @@ export default function ContactInfo() {
                             href={method.link}
                             target={method.link.startsWith('http') ? '_blank' : undefined}
                             rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className={`block p-4 rounded-lg border transition-all duration-300 ${method.primary
-                                    ? 'border-mystic-gold bg-mystic-gold/10 hover:bg-mystic-gold/20'
-                                    : 'border-mystic-purple-light/30 hover:border-mystic-gold/50'
-                                }`}
-                            whileHover={{ scale: 1.02 }}
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.1 }}
+                            whileHover={{ scale: 1.02 }}
+                            className={`group relative overflow-hidden rounded-2xl p-6 border transition-all duration-300 ${method.primary
+                                ? 'border-mystic-gold/60 bg-gradient-to-br from-mystic-gold/20 via-purple-500/10 to-transparent'
+                                : 'border-mystic-gold/30 bg-gradient-to-br from-purple-900/20 via-mystic-black to-transparent hover:border-mystic-gold/60'
+                                }`}
                         >
-                            <div className="flex items-start space-x-4">
-                                <div className="text-3xl flex-shrink-0">{method.icon}</div>
+                            {/* Glow effect */}
+                            <div className={`absolute -inset-1 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition duration-300 ${method.primary ? 'bg-mystic-gold/20' : 'bg-purple-500/10'}`} />
+
+                            <div className="relative flex items-start gap-4">
+                                <motion.div
+                                    className="text-4xl flex-shrink-0"
+                                    whileHover={{ scale: 1.2, rotate: 10 }}
+                                >
+                                    {method.icon}
+                                </motion.div>
                                 <div className="flex-grow">
-                                    <div className="font-semibold text-mystic-gold mb-1">
+                                    <div className="font-semibold text-mystic-gold mb-1 text-lg">
                                         {method.title}
                                     </div>
-                                    <div className="text-sm text-gray-400 mb-2">
+                                    <div className="text-sm text-gray-400 mb-3">
                                         {method.description}
                                     </div>
-                                    <div className="text-white font-medium">{method.value}</div>
+                                    <div className="text-white font-semibold group-hover:text-mystic-gold transition-colors">
+                                        {method.value}
+                                    </div>
                                 </div>
                                 {method.primary && (
-                                    <div className="text-xs bg-mystic-gold text-mystic-black px-2 py-1 rounded-full font-semibold">
-                                        Recomendado
-                                    </div>
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        className="text-xs bg-gradient-to-r from-mystic-gold to-purple-500 text-mystic-black px-3 py-1 rounded-full font-bold uppercase tracking-wider"
+                                    >
+                                        ⭐ Rápido
+                                    </motion.div>
                                 )}
                             </div>
                         </motion.a>
@@ -115,36 +129,46 @@ export default function ContactInfo() {
                 </div>
             </div>
 
-            {/* Horarios e Información */}
-            <div className="mystic-card p-8">
-                <h3 className="font-serif text-xl mystic-glow-text mb-6">
-                    Información Adicional
+            {/* Información Adicional Premium */}
+            <div className="space-y-4 mt-8">
+                <h3 className="font-serif text-2xl bg-gradient-to-r from-mystic-gold to-purple-300 bg-clip-text text-transparent mb-6">
+                    Detalles de Servicio
                 </h3>
-                <div className="space-y-4">
+                <div className="grid gap-4">
                     {scheduleInfo.map((info, index) => (
                         <motion.div
                             key={info.title}
-                            className="flex items-start space-x-4 pb-4 border-b border-mystic-purple-light/30 last:border-b-0"
-                            initial={{ opacity: 0, y: 10 }}
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
+                            className="group relative overflow-hidden rounded-2xl p-6 border border-mystic-gold/30 bg-gradient-to-br from-purple-900/20 via-mystic-black to-transparent hover:border-mystic-gold/60 transition-all duration-300"
                         >
-                            <div className="text-2xl flex-shrink-0">{info.icon}</div>
-                            <div>
-                                <div className="text-mystic-gold font-semibold mb-1">
-                                    {info.title}
+                            {/* Glow effect */}
+                            <div className="absolute -inset-1 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition duration-300 bg-mystic-gold/10" />
+
+                            <div className="relative flex items-start gap-4">
+                                <motion.div
+                                    className="text-3xl flex-shrink-0"
+                                    whileHover={{ scale: 1.2 }}
+                                >
+                                    {info.icon}
+                                </motion.div>
+                                <div>
+                                    <div className="text-mystic-gold font-semibold mb-2 group-hover:text-mystic-gold-light transition-colors">
+                                        {info.title}
+                                    </div>
+                                    <div className="text-gray-300 text-sm">{info.info}</div>
                                 </div>
-                                <div className="text-gray-300">{info.info}</div>
                             </div>
                         </motion.div>
                     ))}
                 </div>
             </div>
 
-            {/* Redes Sociales */}
-            <div className="mystic-card p-8">
-                <h3 className="font-serif text-xl mystic-glow-text mb-6">
-                    Síguenos en Redes
+            {/* Redes Sociales Premium */}
+            <div className="space-y-4 mt-8">
+                <h3 className="font-serif text-2xl bg-gradient-to-r from-mystic-gold to-purple-300 bg-clip-text text-transparent mb-6">
+                    Sigue Nuestro Camino
                 </h3>
                 <div className="grid grid-cols-3 gap-4">
                     {socialLinks.map((social, index) => (
@@ -153,32 +177,60 @@ export default function ContactInfo() {
                             href={social.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-col items-center justify-center p-4 rounded-lg border border-mystic-purple-light/30 hover:border-mystic-gold/50 transition-all duration-300"
-                            whileHover={{ scale: 1.1 }}
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.1 }}
+                            whileHover={{ scale: 1.1 }}
+                            className="group relative overflow-hidden rounded-2xl p-6 border border-mystic-gold/30 bg-gradient-to-br from-purple-900/20 via-mystic-black to-transparent hover:border-mystic-gold/60 transition-all duration-300 flex flex-col items-center justify-center"
                         >
-                            <div className="text-3xl mb-2">{social.icon}</div>
-                            <div className="text-xs text-gray-400">{social.name}</div>
+                            {/* Fondo con gradiente animado */}
+                            <div className={`absolute -inset-1 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-r ${social.color}`} />
+
+                            <div className="relative text-4xl mb-2 group-hover:scale-125 transition-transform">
+                                {social.icon}
+                            </div>
+                            <div className="text-xs text-gray-400 group-hover:text-mystic-gold text-center font-semibold transition-colors">
+                                {social.name}
+                            </div>
                         </motion.a>
                     ))}
                 </div>
             </div>
 
-            {/* Garantía */}
-            <div className="mystic-card p-6 bg-mystic-gold/10 border-mystic-gold/50">
-                <div className="flex items-center space-x-3 mb-3">
-                    <div className="text-2xl">✨</div>
-                    <div className="font-semibold text-mystic-gold">
-                        Primera Consulta Gratuita
+            {/* Garantía Premium */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="group relative mt-8 overflow-hidden rounded-2xl p-8 border-2 border-mystic-gold/60 bg-gradient-to-br from-mystic-gold/20 via-purple-900/20 to-transparent"
+            >
+                {/* Glow effect */}
+                <div className="absolute -inset-2 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-mystic-gold/30 to-purple-500/20" />
+
+                <div className="relative">
+                    <div className="flex items-center gap-3 mb-4">
+                        <motion.span
+                            className="text-4xl"
+                            animate={{ scale: [1, 1.2, 1] }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                        >
+                            ✨
+                        </motion.span>
+                        <h4 className="font-serif text-2xl bg-gradient-to-r from-mystic-gold to-purple-300 bg-clip-text text-transparent">
+                            Primera Consulta
+                        </h4>
+                    </div>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                        Recibe una <span className="text-mystic-gold font-semibold">consulta inicial de lujo completamente gratis</span>.
+                        Conoce cómo nuestras maestras expertas pueden transformar tu vida. Sin compromiso, sin presiones.
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-mystic-gold/30">
+                        <p className="text-xs text-mystic-gold/70 tracking-wide uppercase">
+                            ✦ Confidencialidad Total • Resultados Garantizados ✦
+                        </p>
                     </div>
                 </div>
-                <p className="text-sm text-gray-300">
-                    Recibe una consulta inicial completamente gratis para conocer cómo podemos ayudarte.
-                    Sin compromiso.
-                </p>
-            </div>
+            </motion.div>
         </div>
     );
 }

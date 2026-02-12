@@ -6,110 +6,143 @@ import ServiceFAQ from '@/components/services/ServiceFAQ';
 import ServiceCTA from '@/components/services/ServiceCTA';
 
 export const metadata: Metadata = {
-    title: 'Amarres de Amor Efectivos en Colombia | Recupera a tu Pareja',
-    description: 'Amarres de amor profesionales y efectivos en Medellín, Bogotá y toda Colombia. Recupera a tu ser amado, fortalece tu relación o atrae el amor verdadero. Resultados garantizados en 21 días.',
+    title: 'Amarres de Amor | Rituales de Atracción Amorosa Garantizados | Maestros del Misterio',
+    description: 'Amarres de amor poderosos y efectivos. Rituales comprobados para atraer y mantener el amor verdadero. Expertos en hechizos de atracción amorosa con 25+ años de experiencia. Resultados garantizados.',
     keywords: [
-        'amarres de amor Colombia',
-        'amarres de amor efectivos',
-        'amarres de amor Medellín',
-        'amarres de amor Bogotá',
-        'recuperar pareja',
-        'unir parejas',
-        'amarres rápidos',
-        'endulzamientos',
-        'dominio de amor',
+        'amarres de amor',
+        'hechizo de amor efectivo',
+        'ritual de atracción amorosa',
+        'amarres en Colombia',
+        'hechizo para conquistar',
+        'atraer pareja amorosa',
+        'ritual de vinculación amorosa',
+        'amarre de retorno',
+        'love spell',
+        'atracción garantizada',
     ],
     openGraph: {
-        title: 'Amarres de Amor Efectivos | Maestras del Misterio',
-        description: 'Recupera a tu ser amado con nuestros amarres profesionales. 98% de efectividad. Resultados en 21 días.',
+        title: 'Amarres de Amor | Rituales Poderosos | Maestros del Misterio',
+        description: 'Amarres de amor efectivos con garantía de resultados. Rituales ancestrales para atraer y mantener el amor verdadero.',
     },
 };
 
 const amarresDetails = {
-    title: 'Amarres de Amor Profesionales',
-    subtitle: 'Recupera a tu ser amado y vive el amor que siempre soñaste',
-    icon: '💝',
-    description: 'Nuestros amarres de amor son rituales poderosos diseñados para unir corazones, recuperar parejas perdidas y fortalecer relaciones existentes. Con más de 20 años de experiencia, hemos ayudado a miles de personas a encontrar y mantener el amor verdadero.',
+    title: 'Amarres de Amor Efectivos',
+    subtitle: 'Rituales ancestrales para atraer y vincular el amor verdadero a tu vida',
+    icon: '💓',
+    description: 'Los amarres de amor son rituales ancestrales basados en la magia blanca que utilizan energías universales para atraer, vincular y mantener el amor verdadero. Con más de 25 años de experiencia en hechicería amorosa, nuestras maestras especializadas realizan amarres personalizados que resuenan con tu energía y la de tu ser amado, creando conexiones profundas y duraderas.',
     types: [
         {
-            name: 'Amarre Clásico',
-            description: 'Ritual tradicional para unir dos almas. Ideal para recuperar a tu ex pareja.',
-            duration: '21 días',
+            name: 'Amarre de Atracción Inmediata',
+            description: 'Ritual rápido para atraer la atención y deseo de la persona deseada. Crea magnetismo irresistible.',
+            duration: '30 minutos',
             effectiveness: '95%',
         },
         {
-            name: 'Amarre con Foto',
-            description: 'Utilizando fotografías para crear un vínculo energético más fuerte.',
-            duration: '15 días',
+            name: 'Amarre de Vinculación Profunda',
+            description: 'Ritual completo que vincula almas. Crea lazos emocionales y espirituales duraderos entre dos personas.',
+            duration: '90 minutos',
             effectiveness: '98%',
         },
         {
-            name: 'Amarre Eterno',
-            description: 'El más poderoso. Crea una unión inquebrantable entre dos personas.',
-            duration: '30 días',
+            name: 'Amarre de Retorno de Pareja',
+            description: 'Especializado para traer de regreso a parejas que se han alejado. Reaviva pasión y reconnexión.',
+            duration: '60 minutos',
+            effectiveness: '96%',
+        },
+        {
+            name: 'Amarre de Fidelidad Garantizada',
+            description: 'Ritual poderoso que asegura lealtad y exclusividad en la relación. Evita infidelidades.',
+            duration: '45 minutos',
+            effectiveness: '97%',
+        },
+        {
+            name: 'Amarre de Matrimonio y Unión',
+            description: 'Ritual ancestral para llevar la relación al compromiso matrimonial y unión eterna.',
+            duration: '120 minutos',
             effectiveness: '99%',
         },
         {
-            name: 'Endulzamiento',
-            description: 'Ritual para mejorar el carácter de tu pareja y fortalecer la relación.',
-            duration: '7 días',
-            effectiveness: '90%',
+            name: 'Amarre de Pasión Intensa',
+            description: 'Ritual erótico que enciende la llama pasional. Aumenta deseo y atracción física al máximo.',
+            duration: '45 minutos',
+            effectiveness: '94%',
         },
     ],
     benefits: [
-        'Recupera a tu ex pareja sin importar el tiempo separados',
-        'Fortalece y protege tu relación actual',
-        'Elimina la influencia de terceras personas',
-        'Aumenta el amor y la pasión en la relación',
-        'Crea vínculos duraderos e inquebrantables',
-        'Resultados visibles en las primeras semanas',
+        'Atracción irresistible hacia ti de la persona deseada',
+        'Creación de vínculos emocionales profundos y permanentes',
+        'Eliminación de obstáculos en la relación amorosa',
+        'Aumento exponencial de pasión y deseo físico',
+        'Garantía de fidelidad y exclusividad en la pareja',
+        'Retorno de ex parejas que se han alejado',
+        'Apertura del camino hacia matrimonio y compromiso',
+        'Protección del amor contra interferencias externas',
     ],
     process: [
         {
             step: 1,
-            title: 'Consulta Inicial',
-            description: 'Analizamos tu situación personal y determinamos el mejor ritual para ti.',
+            title: 'Consulta Energética Inicial',
+            description: 'Analizamos tu situación amorosa actual y conectamos con la energía de ambas personas involucradas.',
         },
         {
             step: 2,
-            title: 'Preparación del Ritual',
-            description: 'Reunimos los elementos necesarios y preparamos el espacio sagrado.',
+            title: 'Selección del Ritual Personalizado',
+            description: 'Definimos el tipo de amarre más efectivo según tu objetivo específico y compatibilidad astral.',
         },
         {
             step: 3,
-            title: 'Ejecución',
-            description: 'Realizamos el amarre en días y horas astrológicamente favorables.',
+            title: 'Preparación del Espacio Sagrado',
+            description: 'Purificamos y preparamos el espacio ritual con elementos especiales (velas, hierbas, cristales).',
         },
         {
             step: 4,
-            title: 'Seguimiento',
-            description: 'Te acompañamos durante todo el proceso y verificamos los resultados.',
+            title: 'Realización del Amarre',
+            description: 'Ejecutamos el ritual ancestral canalizando tu nombre y energía con símbolos sagrados poderosos.',
+        },
+        {
+            step: 5,
+            title: 'Vinculación Energética',
+            description: 'Completamos la conexión entre tu energía y la de tu ser amado en el plano espiritual.',
+        },
+        {
+            step: 6,
+            title: 'Seguimiento y Refuerzo',
+            description: 'Realizamos refuerzos periódicos para mantener y fortalecer el amarre a lo largo del tiempo.',
         },
     ],
     faqs: [
         {
-            question: '¿Cuánto tiempo tarda en hacer efecto un amarre?',
-            answer: 'Los primeros signos suelen aparecer entre 7 y 21 días, dependiendo del tipo de amarre y las circunstancias específicas. Algunos clientes reportan cambios desde la primera semana.',
+            question: '¿Funcionan realmente los amarres de amor?',
+            answer: 'Sí, absolutamente. Los amarres de amor están basados en leyes de la atracción y magia blanca universal. Nuestro promedio de efectividad es del 95-99%. Funcionan modificando las energías amorosas y creando una resonancia magnética entre dos personas.',
         },
         {
-            question: '¿Los amarres de amor son seguros?',
-            answer: 'Sí, trabajamos con energías positivas del amor universal. Nuestros amarres no causan daño y están diseñados para crear uniones basadas en el amor verdadero.',
+            question: '¿Es magia negra o tiene efectos secundarios?',
+            answer: 'No. Usamos exclusivamente magia blanca basada en energías universales positivas. No hay maldiciones ni daño. Los efectos son puramente de atracción y vinculación amorosa natural.',
         },
         {
-            question: '¿Funcionan si la persona está con otra pareja?',
-            answer: 'Sí, nuestros amarres son efectivos incluso en estas situaciones. El ritual trabaja en el plano energético para debilitar vínculos artificiales y fortalecer la conexión verdadera.',
+            question: '¿Cuánto tiempo tarda en funcionar un amarre?',
+            answer: 'Los resultados comienzan a manifestarse entre 3-7 días. Cambios mayores se ven en 21-45 días. Algunos amarres muestran efectos inmediatos dependiendo de la receptividad energética de ambas personas.',
         },
         {
-            question: '¿Necesito la foto de la persona?',
-            answer: 'Para algunos amarres sí, aunque tenemos rituales efectivos que solo requieren el nombre completo y fecha de nacimiento. En la consulta inicial determinamos qué necesitamos.',
+            question: '¿El amarre respeta el libre albedrío de la otra persona?',
+            answer: 'Sí. El amarre despierta sentimientos y atracción que ya existen potencialmente. No fuerza voluntades, sino que abre puertas. La otra persona mantiene su libre albedrío en todo momento.',
         },
         {
-            question: '¿Ofrecen garantía?',
-            answer: 'Sí, todos nuestros amarres incluyen garantía de satisfacción. Si no ves resultados en el tiempo establecido, reforzamos el ritual sin costo adicional.',
+            question: '¿Necesitas datos personales de ambas personas?',
+            answer: 'Necesitamos nombres completos y fechas de nacimiento (de ambas personas idealmente). Esto crea una conexión energética precisa para el ritual. A mayor información, más poderoso el amarre.',
         },
         {
-            question: '¿Es confidencial el servicio?',
-            answer: 'Absolutamente. Tu privacidad es sagrada para nosotras. Toda la información se maneja con total discreción y confidencialidad.',
+            question: '¿Se puede hacer un amarre sin que la otra persona lo sepa?',
+            answer: 'Sí, es completamente posible. El amarre funciona a nivel energético y no requiere consentimiento consciente. La otra persona simplemente comenzará a sentir una atracción natural e irresistible hacia ti.',
+        },
+        {
+            question: '¿Qué pasa si el amarre no funciona?',
+            answer: 'Ofrecemos garantía. Si no hay resultados en 45 días, realizamos un refuerzo gratuito. Si el amarre no funciona después de dos refuerzos, devolvemos tu dinero completamente.',
+        },
+        {
+            question: '¿Cuánto dura el efecto de un amarre?',
+            answer: 'Un amarre bien hecho es permanente. Sin embargo, recomendamos refuerzos cada 3-6 meses para mantener su potencia máxima, especialmente en relaciones complejas.',
         },
     ],
 };
@@ -121,7 +154,7 @@ export default function AmarresPage() {
                 title={amarresDetails.title}
                 subtitle={amarresDetails.subtitle}
                 icon={amarresDetails.icon}
-                gradient="from-pink-500/20 to-red-500/20"
+                gradient="from-red-500/20 to-pink-500/20"
             />
             <ServiceDetails
                 description={amarresDetails.description}
@@ -131,9 +164,9 @@ export default function AmarresPage() {
             <ServiceBenefits benefits={amarresDetails.benefits} />
             <ServiceFAQ faqs={amarresDetails.faqs} />
             <ServiceCTA
-                title="¿Lista para Recuperar a tu Ser Amado?"
-                description="No pierdas más tiempo. Comienza hoy mismo tu transformación amorosa."
-                service="amarres de amor"
+                title="¿Listo para Atraer el Amor que Mereces?"
+                description="Nuestras maestras expertas están listos para realizar tu amarre personalizado. Resultados garantizados con la magia blanca más poderosa."
+                service="amarre de amor effectivo"
             />
         </>
     );
