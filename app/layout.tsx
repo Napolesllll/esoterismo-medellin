@@ -5,6 +5,7 @@ import { defaultMetadata } from "@/lib/metadata";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/Whatsappbutton";
+import MysticalLoader from "@/components/ui/MysticalLoader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="min-h-screen flex flex-col">
+        <MysticalLoader />
         <Header />
         <main className="flex-grow">
           {children}
