@@ -58,7 +58,7 @@ export default function Header() {
                         </motion.div>
                         <div className="hidden sm:block">
                             <div className="font-serif text-lg md:text-xl font-bold mystic-glow-text">
-                                Maestros del Misterio
+                                Maestros del Misteriooo
                             </div>
                             <div className="text-xs text-mystic-gold opacity-75">Servicios Esotéricos</div>
                         </div>
