@@ -2,32 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --font-playfair: 'Playfair Display', serif;
+    --font-inter: 'Inter', sans-serif;
+  }
+  
+  * {
+    @apply border-mystic-purple;
+  }
+  
+  body {
+    @apply bg-mystic-black text-white font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(198, 167, 94, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(45, 27, 78, 0.15) 0%, transparent 40%),
+      linear-gradient(135deg, #0A0A0A 0%, #1D0B3E 50%, #2D1B4E 100%);
+    background-attachment: fixed;
+  }
+  
+  html {
+    scroll-behavior: smooth;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .mystic-card {
+    @apply bg-card-gradient backdrop-blur-xl border border-mystic-purple-light/30 rounded-2xl shadow-mystic-card;
+  }
+  
+  .mystic-glow-text {
+    @apply text-mystic-gold;
+    text-shadow: 0 0 20px rgba(198, 167, 94, 0.5);
+  }
+  
+  .btn-primary {
+    @apply bg-mystic-gold hover:bg-mystic-gold-light text-mystic-black font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-mystic-glow hover:shadow-mystic-glow hover:scale-105;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-mystic-gold text-mystic-gold hover:bg-mystic-gold hover:text-mystic-black font-semibold px-8 py-4 rounded-full transition-all duration-300;
+  }
+  
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl mystic-glow-text mb-6;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl text-gray-300 max-w-2xl mx-auto;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #C6A75E, #A68B4A);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #D4B87A, #C6A75E);
+}
+
+/* Selection */
+::selection {
+  background: rgba(198, 167, 94, 0.3);
+  color: #FFFFFF;
 }
