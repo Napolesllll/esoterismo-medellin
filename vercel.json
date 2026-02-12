@@ -1,0 +1,20 @@
+{
+  "buildCommand": "npm run build",
+  "dev": "next dev",
+  "framework": "nextjs",
+  "nodeVersion": "18.x",
+  "outputDirectory": ".next",
+  "regions": ["iad1"],
+  "functions": {
+    "api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "redirects": [
+    {
+      "source": "/servicios",
+      "destination": "/#servicios",
+      "permanent": true
+    }
+  ]
+}

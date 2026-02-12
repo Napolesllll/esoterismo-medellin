@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://maestrasdelmisterio.com';
+  const baseUrl = 'https://esoterismo-medellin.vercel.app';
   const currentDate = new Date();
 
   return [

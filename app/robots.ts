@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://maestrasdelmisterio.com/sitemap.xml',
+    sitemap: 'https://esoterismo-medellin.vercel.app/sitemap.xml',
   };
 }
