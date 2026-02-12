@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const amarresDetails = {
     title: 'Amarres de Amor Efectivos',
     subtitle: 'Rituales ancestrales para atraer y vincular el amor verdadero a tu vida',
-    icon: '💓',
+    icon: '/iconamarres.png',
     description: 'Los amarres de amor son rituales ancestrales basados en la magia blanca que utilizan energías universales para atraer, vincular y mantener el amor verdadero. Con más de 25 años de experiencia en hechicería amorosa, nuestras maestras especializadas realizan amarres personalizados que resuenan con tu energía y la de tu ser amado, creando conexiones profundas y duraderas.',
     types: [
         {

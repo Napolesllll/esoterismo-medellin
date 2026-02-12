@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import FadeIn from '@/components/animations/FadeIn';
 
 interface ServiceHeroProps {
@@ -90,7 +91,7 @@ export default function ServiceHero({ title, subtitle, icon, gradient }: Service
 
                     <FadeIn delay={0.1}>
                         <motion.div
-                            className="text-8xl md:text-9xl mb-8 drop-shadow-2xl"
+                            className="mb-8 drop-shadow-2xl inline-block"
                             whileHover={{ scale: 1.2, rotate: 20 }}
                             animate={{
                                 scale: [1, 1.08, 1],
@@ -102,7 +103,17 @@ export default function ServiceHero({ title, subtitle, icon, gradient }: Service
                                 hover: { duration: 0.5 },
                             }}
                         >
-                            {icon}
+                            {icon.startsWith('/') ? (
+                                <Image
+                                    src={icon}
+                                    alt="Service icon"
+                                    width={180}
+                                    height={280}
+                                    className="w-56 h-80"
+                                />
+                            ) : (
+                                <div className="text-8xl md:text-9xl">{icon}</div>
+                            )}
                         </motion.div>
                     </FadeIn>
 

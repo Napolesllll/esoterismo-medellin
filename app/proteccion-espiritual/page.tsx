@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const proteccionDetails = {
     title: 'Protección Espiritual Absoluta',
     subtitle: 'Crea un blindaje energético impenetrable contra maleficios, envidias y energías negativas',
-    icon: '🛡️',
+    icon: '/icoproteccion.png',
     description: 'La protección espiritual es tu defensa contra energías dañinas, maleficios, envidias y malas intenciones. Nuestro trabajo especializado crea escudos energéticos duraderos que actúan como un blindaje invisible, protegiéndote a ti, tu familia, tu hogar y tu negocio. Con técnicas ancestrales combinadas con poder espiritual moderno, creamos protecciones que repelen y transforman energías negativas.',
     types: [
         {

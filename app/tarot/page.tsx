@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const tarotDetails = {
     title: 'Tarot Profesional Preciso',
     subtitle: 'Descubre los secretos de tu futuro con nuestras maestras videntes',
-    icon: '🔮',
+    icon: '/icontarot.png',
     description: 'Nuestras lecturas de tarot profesionales utilizan las antiguas artes adivinatorias para revelar los misterios del pasado, presente y futuro. Con más de 20 años de experiencia interpretando los arcanos mayores y menores, nuestras maestras videntes te ofrecen revelaciones claras y precisas que transformarán tu comprensión de la vida.',
     types: [
         {
